@@ -1,0 +1,61 @@
+﻿@model LoginViewModel
+
+@{
+    Layout = "_LayoutOff";
+    ViewData["Title"] = "Login";
+}
+<style>
+    .card {
+        border: none;
+    }
+
+    .card-footer {
+        background-color: white;
+    }
+
+    .full {
+        width: 100%;
+    }
+</style>
+
+<div class="card d-flex align-items-center align-self-center ">
+    <h1 class="card-title">Login</h1>
+
+    <form asp-controller="Login" asp-action="Login" method="post">
+        <div class="card-body">
+            <div class="row">
+                <div class="col col-12">
+                    <div class="form-group">
+                        <label asp-for="UserName"></label>
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col col-12">
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" class="form-control" type="password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12">
+                <div class="card-footer form-group">
+                    <input type="submit" class="btn btn-primary full" value="Logar" />
+                </div>
+            </div>
+            <div class="col col-12">
+                <div class="card-footer form-group">
+                    <a asp-controller="Login" asp-action="Register" class="btn btn-outline-success full">Registrar</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

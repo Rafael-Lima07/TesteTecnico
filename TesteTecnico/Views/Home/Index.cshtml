@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="row">
+    <div class="col col-6">
+        <div class="card" style="width: 25rem; border: none;">
+            <h2 class="card-title">Clientes</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkaXi8ba_aAI1rMf2Ql7zX9wn4qP4cW1DGOMcB3oz8WQ&s" />
+            <div class="card-body">
+                <p class="card-text">
+                    Controle seus clientes de forma pratica!
+                </p>
+            </div>
+            <div class="card-footer">
+                <a asp-action="Index" asp-controller="Clientes">Lista de Clientes</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="card" style="width: 20rem; border: none;">
+            <h2 class="card-title">Produtos</h2>
+            <img src="https://neilpatel.com/wp-content/uploads/2019/07/mini-caixas-de-produtos-em-cima-de-laptop.jpeg" />
+            <div class="card-body">
+                <p class="card-text">
+                    Controle seus Produtos de forma pratica!
+                </p>
+            </div>
+            <div class="card-footer">
+                <a asp-action="Index" asp-controller="Produtos">Lista de Produtos</a>
+            </div>
+        </div>
+    </div>
+</div>
